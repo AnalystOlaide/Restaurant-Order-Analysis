@@ -1,6 +1,4 @@
-Perfect! Here's the **updated GitHub README** version with those corrections — data source as **Maven Analytics** and SQL dialect as **PostgreSQL**:
 
----
 
 # 🍽 Restaurant Orders Analysis (SQL Project)
 
@@ -42,7 +40,8 @@ Using SQL, this project answers these questions through structured data analysis
 
 ## 📊 Key Insights & SQL Queries  
 
-### 🔍 1. What was the most ordered item and category? ![WhatsApp Image 2025-04-06 at 13 30 08_00d10ac9](https://github.com/user-attachments/assets/0ffbb0de-3a2a-46e6-9adc-f24191c39d9b)
+### 🔍 1. What was the most ordered item and category?
+![WhatsApp Image 2025-04-06 at 13 30 08_00d10ac9](https://github.com/user-attachments/assets/0ffbb0de-3a2a-46e6-9adc-f24191c39d9b)
 
 ```sql
 SELECT m.item_name, COUNT(o.item_id) AS total_orders, m.category
@@ -56,7 +55,8 @@ LIMIT 1;
 
 ---
 
-### 🔍 2. Least ordered item and category ![WhatsApp Image 2025-04-06 at 13 31 41_8b7e9678](https://github.com/user-attachments/assets/54aace29-8f71-4d2c-b934-22ec03dba37b)
+### 🔍 2. Least ordered item and category 
+![WhatsApp Image 2025-04-06 at 13 31 41_8b7e9678](https://github.com/user-attachments/assets/54aace29-8f71-4d2c-b934-22ec03dba37b)
 
 ```sql
 SELECT m.item_name, COUNT(o.item_id) AS total_orders, m.category
@@ -70,7 +70,8 @@ LIMIT 1;
 
 ---
 
-### 🔍 3. Total unique items purchased ![WhatsApp Image 2025-04-06 at 13 32 26_3c0b2108](https://github.com/user-attachments/assets/0548e298-6051-49b8-aee8-d34aa0619d97)
+### 🔍 3. Total unique items purchased 
+![WhatsApp Image 2025-04-06 at 13 32 26_3c0b2108](https://github.com/user-attachments/assets/0548e298-6051-49b8-aee8-d34aa0619d97)
 
 
 ```sql
@@ -81,7 +82,8 @@ JOIN order_details o ON m.menu_item_id = o.item_id;
 
 ---
 
-### 🔍 4. Highest spend orders ![WhatsApp Image 2025-04-06 at 13 33 17_25994ab7](https://github.com/user-attachments/assets/9b397e22-1031-4b73-88c0-868e0f2e8b0f)
+### 🔍 4. Highest spend orders
+![WhatsApp Image 2025-04-06 at 13 33 17_25994ab7](https://github.com/user-attachments/assets/9b397e22-1031-4b73-88c0-868e0f2e8b0f)
 
 ```sql
 SELECT order_id, item_name, SUM(price) AS spend_order
@@ -99,7 +101,8 @@ LIMIT 5;
 
 ---
 
-### 🔍 5. Peak order times ![WhatsApp Image 2025-04-06 at 13 36 00_7fc84b53](https://github.com/user-attachments/assets/bba58755-c4d2-4c41-a730-fca55f9d3fc3)
+### 🔍 5. Peak order times 
+![WhatsApp Image 2025-04-06 at 13 36 00_7fc84b53](https://github.com/user-attachments/assets/bba58755-c4d2-4c41-a730-fca55f9d3fc3)
 
 ```sql
 SELECT EXTRACT(HOUR FROM order_time) AS order_hour, COUNT(DISTINCT order_id) AS total_orders
@@ -111,7 +114,8 @@ ORDER BY total_orders DESC;
 
 ---
 
-### 🔍 6. Best-selling cuisines (by revenue) ![WhatsApp Image 2025-04-06 at 14 14 11_57dd3639](https://github.com/user-attachments/assets/df89338b-bab0-49a4-8b83-98f937ef1da0)
+### 🔍 6. Best-selling cuisines (by revenue) 
+![WhatsApp Image 2025-04-06 at 14 14 11_57dd3639](https://github.com/user-attachments/assets/df89338b-bab0-49a4-8b83-98f937ef1da0)
 
 ```sql
 SELECT category, SUM(price) AS total_revenue
@@ -125,7 +129,8 @@ LIMIT 3;
 
 ---
 
-### 🔍 7. Orders with more than 12 items ![WhatsApp Image 2025-04-06 at 14 14 11_ee0e8874](https://github.com/user-attachments/assets/4a766fdf-ea29-468c-b35b-fadd00cceffa)
+### 🔍 7. Orders with more than 12 items
+![WhatsApp Image 2025-04-06 at 14 14 11_ee0e8874](https://github.com/user-attachments/assets/4a766fdf-ea29-468c-b35b-fadd00cceffa)
 
 ```sql
 SELECT COUNT(*) AS orders_with_more_than_12_items
@@ -140,7 +145,8 @@ FROM (
 
 ---
 
-### 🔍 8. Number of Italian dishes on the menu ![WhatsApp Image 2025-04-06 at 14 15 21_18cacdf4](https://github.com/user-attachments/assets/991d7c61-80ef-4f7f-b351-deeb26b8ccec)
+### 🔍 8. Number of Italian dishes on the menu
+![WhatsApp Image 2025-04-06 at 14 15 21_18cacdf4](https://github.com/user-attachments/assets/991d7c61-80ef-4f7f-b351-deeb26b8ccec)
 
 ```sql
 SELECT COUNT(*) FROM menu_items WHERE category = 'Italian';
@@ -149,7 +155,8 @@ SELECT COUNT(*) FROM menu_items WHERE category = 'Italian';
 
 ---
 
-### 🔍 9. Most expensive Italian dish ![WhatsApp Image 2025-04-06 at 14 17 02_51e1c38d](https://github.com/user-attachments/assets/3ebb76eb-3599-417b-8ac3-f57f3813f020)
+### 🔍 9. Most expensive Italian dish 
+![WhatsApp Image 2025-04-06 at 14 17 02_51e1c38d](https://github.com/user-attachments/assets/3ebb76eb-3599-417b-8ac3-f57f3813f020)
 
 ```sql
 SELECT item_name, category, price
@@ -162,7 +169,8 @@ LIMIT 1;
 
 ---
 
-### 🔍 10. Dish count by category![WhatsApp Image 2025-04-06 at 14 18 42_c60b8067](https://github.com/user-attachments/assets/c7dab7bf-d007-4764-ad6a-e3a32934f85c)
+### 🔍 10. Dish count by category
+![WhatsApp Image 2025-04-06 at 14 18 42_c60b8067](https://github.com/user-attachments/assets/c7dab7bf-d007-4764-ad6a-e3a32934f85c)
 
 ```sql
 SELECT category, COUNT(*) AS dish_count
@@ -176,7 +184,8 @@ GROUP BY category;
 
 ---
 
-### 🔍 11. Average dish price per category![WhatsApp Image 2025-04-06 at 14 19 39_46e3c87a](https://github.com/user-attachments/assets/c0000265-acb1-4f37-a30c-145f8629dde3)
+### 🔍 11. Average dish price per category
+![WhatsApp Image 2025-04-06 at 14 19 39_46e3c87a](https://github.com/user-attachments/assets/c0000265-acb1-4f37-a30c-145f8629dde3)
 
 ```sql
 SELECT category, ROUND(AVG(price), 2) AS avg_price
