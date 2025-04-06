@@ -289,7 +289,7 @@ Based on the data-driven insights gathered, the restaurant can make the followin
 - Schedule **promotions** or peak-time campaigns at **12PM**, **1PM**, and **6PM**  
 - **Expand** Italian, Asian, and Mexican cuisine categories  
 - **Investigate pricing anomalies** in the Mexican category  
-🔚 **Conclusion**  
+## 🔚 Conclusion 
 This SQL-driven restaurant analysis provides actionable insights to improve menu design, revenue strategies, and operational planning. By understanding customer behavior and item performance, the restaurant can:  
 - Increase profitability through focused promotions and better resource allocation  
 - Enhance customer satisfaction by aligning offerings with preferences and trends  
