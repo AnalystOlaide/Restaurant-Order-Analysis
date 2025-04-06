@@ -200,7 +200,8 @@ GROUP BY category;
 
 ---
 
-### 🔍 12. Order date range![WhatsApp Image 2025-04-06 at 14 22 36_e3702485](https://github.com/user-attachments/assets/e77bbb96-b4e0-4659-afd9-27327cd74061)
+### 🔍 12. Order date range
+![WhatsApp Image 2025-04-06 at 14 22 36_e3702485](https://github.com/user-attachments/assets/e77bbb96-b4e0-4659-afd9-27327cd74061)
 
 ```sql
 SELECT MIN(order_date) AS start_date, MAX(order_date) AS end_date
@@ -210,7 +211,8 @@ FROM order_details;
 
 ---
 
-### 🔍 13. Total number of orders![WhatsApp Image 2025-04-06 at 14 23 42_1317935e](https://github.com/user-attachments/assets/38e37622-aa7c-4822-9000-52455c8a8d7f)
+### 🔍 13. Total number of orders
+![WhatsApp Image 2025-04-06 at 14 23 42_1317935e](https://github.com/user-attachments/assets/38e37622-aa7c-4822-9000-52455c8a8d7f)
 
 ```sql
 SELECT COUNT(DISTINCT order_id) FROM order_details;
@@ -219,7 +221,8 @@ SELECT COUNT(DISTINCT order_id) FROM order_details;
 
 ---
 
-### 🔍 14. Total number of items ordered![WhatsApp Image 2025-04-06 at 14 24 24_c2ba3b07](https://github.com/user-attachments/assets/9fda3e8c-070a-4e5c-96b5-bcebe9cfe6e1)
+### 🔍 14. Total number of items ordered
+![WhatsApp Image 2025-04-06 at 14 24 24_c2ba3b07](https://github.com/user-attachments/assets/9fda3e8c-070a-4e5c-96b5-bcebe9cfe6e1)
 
 ```sql
 SELECT COUNT(*) FROM order_details;
@@ -228,7 +231,8 @@ SELECT COUNT(*) FROM order_details;
 
 ---
 
-### 🔍 15. Order with the most items![WhatsApp Image 2025-04-06 at 14 25 10_bc922059](https://github.com/user-attachments/assets/7104ccf4-52f3-4d20-b702-bdb75081a27b)
+### 🔍 15. Order with the most items
+![WhatsApp Image 2025-04-06 at 14 25 10_bc922059](https://github.com/user-attachments/assets/7104ccf4-52f3-4d20-b702-bdb75081a27b)
 
 ```sql
 SELECT order_id, COUNT(*) AS item_count
