@@ -115,7 +115,8 @@ ORDER BY total_orders DESC;
 ---
 
 ### 🔍 6. Best-selling cuisines (by revenue) 
-![WhatsApp Image 2025-04-06 at 14 14 11_57dd3639](https://github.com/user-attachments/assets/df89338b-bab0-49a4-8b83-98f937ef1da0)
+![WhatsApp Image 2025-04-06 at 13 39 55_552f842e](https://github.com/user-attachments/assets/2c6c3a29-361e-4381-8c73-a92591750b2d)
+
 
 ```sql
 SELECT category, SUM(price) AS total_revenue
